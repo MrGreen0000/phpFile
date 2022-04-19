@@ -1,0 +1,40 @@
+    
+<!-- Zone Php -->
+<?php
+$UPLOADDIR = "img/";
+
+if (isset($_POST) && !empty($_POST)){
+
+    /*?><pre><?php print_r($_POST)?><pre><?php*/
+   
+    if ($_FILES['monfichier']['error'] == 0){
+        ?><pre><?php print_r($_FILES)?><pre><?php 
+
+        if($_FILES['monfichier']['size'] > 1500000){
+            $error = "Votre fichier est trop lourd";
+        }
+
+        $extension = strrchr($_FILES['monfichier'] ['name'], '.');
+        if ($extension!= '.png'){
+            $error = "Votre fichier n'est pas conforme.";
+        }
+
+        if(!isset($error)){
+            move_uploaded_file($_FILES['monfichier']['tmp_name'], 'img/' .$_FILES['monfichier'] ['name'],);
+            
+
+        }
+       
+
+    }else {
+        $error = 'problème formulaire';
+    }
+}
+?>
+
+<!-- Zone Formulaire -->
+<div class="color"><p><?php if(isset($error)) echo $error;?></p></div>
+<form method="POST" action="#" enctype="multipart/form-data">
+    <input type="file" name="monfichier" value=""/>
+   <input type="submit" name="chargement" value="charger le fichier">
+</form>

@@ -1,0 +1,65 @@
+.color{
+    color: red;
+}
+
+.permisDeConduire {
+  
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+}
+.ville {
+  
+  background-color: rgb(53, 115, 201);
+  
+  font-size: 20px;
+  
+  text-align: center;
+}
+
+.numeroDePermis{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.homerIdentite{
+    background-color: white;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ 
+}
+
+.photoIdentite{
+    border: 2px solid black;
+}
+
+.titreDeCarte{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(53, 115, 201);
+    width: 1000px;
+    text-align: center;
+    border: 2px solid black;
+    
+}
+
+.identite{
+ font-family: 'Courier New', Courier, monospace;
+ 
+}
+
+.homerDescription{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.signature{
+    
+    font-family: 'Courier New', Courier, monospace;
+    
+}
